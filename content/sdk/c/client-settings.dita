@@ -312,6 +312,15 @@ lcb_cntl(instance, LCB_CNTL_SET, LCB_CNTL_OPTIMEOUT, &amp;newval);</codeblock>By
                                     supply the sync token directly in the command
                                 structure.</note><codeblock spectitle="Connection String Example">dur_mutation_tokens=1</codeblock></entry>
                         </row>
+                        <row>
+                            <entry><codeph>dnssrv</codeph> (Boolean). Since 2.7.3</entry>
+                            <entry>[Connection String Only]</entry>
+                            <entry>Enable/Disable the use of DNS SRV lookups to determine the list
+                                of Couchbase nodes to use for bootstrapping. This can be set to
+                                    <codeph>true</codeph> or <codeph>false</codeph>. DNS SRV lookups
+                                are used by default if there is only a single node (without a port)
+                                in the connection string host list.</entry>
+                        </row>
                     </tbody>
                 </tgroup>
             </table>
